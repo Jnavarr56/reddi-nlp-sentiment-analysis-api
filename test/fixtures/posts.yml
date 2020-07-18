@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: MyString
+  title: MyString
+  text: MyString
+  html: MyString
+  num_comments: MyString
+  upvotes: 1
+  downvotes: 1
+  reddit_id: MyString
+  posted_at_utc: 2020-07-16 20:46:32
+  author_id: MyString
+  author_username: MyString
+  author_icon_img: MyString
+  sentiment_score: 1
+  sentiment_magnitude: 1
+  sentence_sentiment_analysis:
+
+two:
+  url: MyString
+  title: MyString
+  text: MyString
+  html: MyString
+  num_comments: MyString
+  upvotes: 1
+  downvotes: 1
+  reddit_id: MyString
+  posted_at_utc: 2020-07-16 20:46:32
+  author_id: MyString
+  author_username: MyString
+  author_icon_img: MyString
+  sentiment_score: 1
+  sentiment_magnitude: 1
+  sentence_sentiment_analysis:

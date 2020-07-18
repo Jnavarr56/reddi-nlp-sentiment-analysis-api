@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  cache:
+    image: "redis:latest"
+    expose:
+      - "6379"
+  api:
+    build: .
+    environment:
+      - RAILS_ENV=development
+      - "REDDIT_CLIENT_ID=${REDDIT_CLIENT_ID}"
+      - "REDDIT_SECRET=${REDDIT_SECRET}"
+      - "SUBREDDIT=${SUBREDDIT}"
+      - "SUBREDDIT_QUERY=${SUBREDDIT_QUERY}"
+      - "MONGO_DB_URL=${MONGO_DB_URL}"
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/app
+    depends_on:
+      - "cache"
+    command: bash -c "rm -f tmp/pids/server.pid && /wait && bundle exec rails s -p 80 -b '0.0.0.0'"
