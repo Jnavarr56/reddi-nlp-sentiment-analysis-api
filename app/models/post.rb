@@ -76,7 +76,7 @@ class Post
         next
       end
 
-      content_to_analyze = reddit_post.selftext + "\n" reddit_post.selftext
+      content_to_analyze = reddit_post.selftext + "\n" + reddit_post.selftext
       analyzable_language_document = { content: content_to_analyze, type: :PLAIN_TEXT }
       sentiment_analysis_response = google_language_client.analyze_sentiment(document: analyzable_language_document)
       post_sentiment = sentiment_analysis_response.document_sentiment
